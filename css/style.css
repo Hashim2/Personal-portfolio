@@ -538,6 +538,7 @@ body.light hr.separator {
   width: 100%;
   max-width: 100%;
   border-radius: 29px;
+  height: 50vh;
 
 }
 .home .bg {
@@ -546,7 +547,7 @@ body.light hr.separator {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 30px;
-  height: 40vh;
+  height: auto;
   left: 40px;
   top: 40px;
   padding: 0%;
