@@ -537,6 +537,7 @@ body.light hr.separator {
 .imgFluid{
   width: 100%;
   max-width: 100%;
+  border-radius: 30px;
 
 }
 .home .bg {
