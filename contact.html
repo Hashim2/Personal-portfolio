@@ -117,7 +117,7 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform">
+                <form class="contactform" method="post" action="https://formspree.io/f/xqkrnobw">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -142,29 +142,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        <script>
-            document.querySelector("contactform").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var formData = new FormData(this);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://formspree.io/f/xqkrnobw", true);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-            console.log("Form submitted successfully:", xhr.responseText);
-            // Redirect to a thank you page or display a success message
-        } else {
-            console.error("Form submission failed:", xhr.status);
-            // Handle the error
-        }
-    };
-    xhr.send(formData);
-});
-
-        </script>    
-        
+            </div> 
 <!-- Template JS Files -->
 <script src="js/jquery-3.5.0.min.js"></script>
 <script src="js/preloader.min.js"></script>
