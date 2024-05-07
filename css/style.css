@@ -536,15 +536,22 @@ body.light hr.separator {
 }
 .imgFluid{
   width: 100%;
+  
+
   max-width: 100%;
+
 }
 .home .bg {
   background-image: url(/img/projects/Profile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+
   background-position: center;
+
   border-radius: 30px;
+
   height: 60vh;
+
   left: 40px;
   padding: 0%;
   box-shadow: 0 0 7px rgba(0,0,0,.9);
