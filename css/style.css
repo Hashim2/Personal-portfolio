@@ -537,7 +537,7 @@ body.light hr.separator {
 .imgFluid{
   width: 100%;
   max-width: 100%;
-  border-radius: 30px;
+  border-radius: 29px;
 
 }
 .home .bg {
@@ -546,7 +546,7 @@ body.light hr.separator {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 30px;
-  height: 60vh;
+  height: 50vh;
   left: 40px;
   padding: 0%;
   box-shadow: 0 0 7px rgba(0,0,0,.9);
