@@ -536,6 +536,7 @@ body.light hr.separator {
 }
 
 .home .bg {
+  background-image: url(/img/projects/Profile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
