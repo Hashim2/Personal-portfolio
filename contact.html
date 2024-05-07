@@ -117,7 +117,7 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post">
+                <form class="contactform">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -144,7 +144,7 @@
                 </form>
             </div>
         <script>
-            document.querySelector("form").addEventListener("submit", function (e) {
+            document.querySelector("contactform").addEventListener("submit", function (e) {
     e.preventDefault();
     var formData = new FormData(this);
     var xhr = new XMLHttpRequest();
