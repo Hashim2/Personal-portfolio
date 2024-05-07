@@ -117,20 +117,20 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="Mailto()">
+                <form class="contactform" method="post" onsubmit="sendEmail(event)">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="name" placeholder="YOUR NAME">
+                                <input id="name" type="text" name="name" placeholder="YOUR NAME">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="email" placeholder="YOUR EMAIL">
+                                <input id="email" type="email" name="email" placeholder="YOUR EMAIL">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                                <input id="subject" type="text" name="subject" placeholder="YOUR SUBJECT">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+                                <textarea id="message" name="message" placeholder="YOUR MESSAGE"></textarea>
                                 <button type="submit" class="button">
                                     <span class="button-text">Send Message</span>
                                     <span class="button-icon fa fa-send"></span>
@@ -143,32 +143,27 @@
                     </div>
                 </form>
             </div>
-            <!-- Contact Form Ends -->
-        </div>
-    </div>
-
-</section>
-<script>
-    function Mailto(){
-    document.getElementById('yourForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-    
-    // Get form data
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-    
-    // Construct mailto link
-    var mailtoLink = 'mailto:yourmail@mail.com' +
-                     '?subject=' + encodeURIComponent(subject) +
-                     '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
-    
-    // Open default email client with pre-filled fields
-    window.location.href = mailtoLink;
-});
-    }
-</script>
+            
+            <script>
+                function sendEmail(event) {
+                    event.preventDefault(); // Prevent the form from submitting normally
+                    
+                    // Get form data
+                    var name = document.getElementById('name').value;
+                    var email = document.getElementById('email').value;
+                    var subject = document.getElementById('subject').value;
+                    var message = document.getElementById('message').value;
+                    
+                    // Construct mailto link
+                    var mailtoLink = 'mailto:yourmail@mail.com' +
+                                    '?subject=' + encodeURIComponent(subject) +
+                                    '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+                    
+                    // Open default email client with pre-filled fields
+                    window.location.href = mailtoLink;
+                }
+            </script>
+            
 <!-- Template JS Files -->
 <script src="js/jquery-3.5.0.min.js"></script>
 <script src="js/preloader.min.js"></script>
