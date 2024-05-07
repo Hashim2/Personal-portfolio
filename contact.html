@@ -117,7 +117,19 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" onsubmit="sendEmail(event)">
+                <form class="contactform" method="post" onsubmit=" function sendEmail() {
+                     // Get form data
+                    var name = document.getElementById('name').value;
+                    var email = document.getElementById('email').value;
+                    var subject = document.getElementById('subject').value;
+                    var message = document.getElementById('message').value;
+                    // Construct mailto link
+                    var mailtoLink = 'mailto:yourmail@mail.com' +
+                                    '?subject=' + encodeURIComponent(subject) +
+                                    '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+                    
+                    // Open default email client with pre-filled fields
+                    window.location.href = mailtoLink;}">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
