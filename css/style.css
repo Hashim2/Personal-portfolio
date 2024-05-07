@@ -534,7 +534,11 @@ body.light hr.separator {
   left: -83%;
   top: -50%;
 }
-
+.imgFluid{
+  width: 0 0 33%;
+  height: auto; 
+  max-width: 33%;
+}
 .home .bg {
   background-image: url(/img/projects/Profile.jpg);
   background-size: cover;
@@ -542,7 +546,7 @@ body.light hr.separator {
   background-position: top;
   z-index: 111;
   border-radius: 30px;
-  
+
   left: 40px;
   top: 40px;
   padding: 0%;
