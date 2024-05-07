@@ -117,7 +117,7 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="php/process-form.php">
+                <form class="contactform" method="post" action="mailto()">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -148,6 +148,27 @@
     </div>
 
 </section>
+<script>
+    function mailto(){
+    document.getElementById('yourForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    // Get form data
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+    
+    // Construct mailto link
+    var mailtoLink = 'mailto:yourmail@mail.com' +
+                     '?subject=' + encodeURIComponent(subject) +
+                     '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+    
+    // Open default email client with pre-filled fields
+    window.location.href = mailtoLink;
+});
+    }
+</script>
 <!-- Template JS Files -->
 <script src="js/jquery-3.5.0.min.js"></script>
 <script src="js/preloader.min.js"></script>
